@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Tokens de marca — única fuente de verdad para el color */
+  --bg: #f8f7f4;
+  --surface: #ffffff;
+  --navy: #071c2f;
+  --navy-light: #0f2747;
+  --text: #0f2747;
+  --text-muted: #5b6878;
+  --border: #d7dde5;
+  --accent: #1d4ed8;
+  --accent-bright: #2563eb;
+  --accent-focus: #60a5fa;
+
+  --dark-bg: #071c2f;
+  --dark-surface: #0f2747;
+  --dark-text: #f8f7f4;
+  --dark-muted: #a7b3c2;
+  --dark-border: #29415a;
+
+  /* Tono neutro de los huecos fotográficos: no es color de marca,
+     desaparece al colocar las fotos definitivas */
+  --photo-slot: #9aa4b0;
+
+  /* Ritmo del mockup: contenido 1152px a 1280px de viewport */
+  --shell-padding: 40px;
+
+  color-scheme: light;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-weight: 500;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection {
+    background: var(--accent-bright);
+    color: #fff;
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--accent-focus);
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+}
+
+@layer components {
+  .shell {
+    @apply mx-auto w-full;
+    max-width: 1440px;
+    /* Márgenes laterales del mockup: 6,25% del viewport, con tope */
+    padding-inline: clamp(20px, 6.25%, 90px);
+  }
+
+  /* Eyebrow: mayúsculas, tracking amplio, cuerpo chico */
+  .eyebrow {
+    @apply text-[10px] font-semibold uppercase leading-none tracking-eyebrow lg:text-[11px] xl:text-[12px];
+  }
+
+  .h-display {
+    @apply font-bold leading-[1.14] tracking-[-0.02em];
+    font-size: clamp(1.95rem, 3.6vw, 3.25rem);
+  }
+
+  .h-section {
+    @apply font-bold leading-[1.16] tracking-[-0.015em];
+    font-size: clamp(1.625rem, 2.55vw, 2.3rem);
+  }
+
+  .body-copy {
+    @apply font-medium leading-[1.72];
+    font-size: clamp(15px, 1.12vw, 16px);
+    color: var(--text-muted);
+  }
+
+  /* Máscaras diagonales: la diagonal siempre asciende hacia la derecha */
+  .clip-hero {
+    clip-path: polygon(0% 100%, 55% 0%, 100% 0%, 100% 100%);
+  }
+
+  .clip-service {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 42%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
