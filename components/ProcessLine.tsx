@@ -7,15 +7,15 @@ export default function ProcessLine() {
   const stops = [0, 25, 50]
 
   return (
-    <div className="relative hidden h-[120px] w-full lg:block" aria-hidden="true">
+    <div className="relative hidden h-[96px] w-full lg:block" aria-hidden="true">
       <svg
-        viewBox="0 0 1000 120"
+        viewBox="0 0 1000 96"
         fill="none"
         preserveAspectRatio="none"
         className="absolute inset-0 h-full w-full"
       >
         <path
-          d="M0 112H505C610 112 700 92 772 62C838 35 890 18 962 8"
+          d="M0 90H505C608 90 698 74 770 50C836 28 890 14 962 6"
           stroke="var(--accent-bright)"
           strokeWidth="1"
           vectorEffect="non-scaling-stroke"
@@ -27,14 +27,14 @@ export default function ProcessLine() {
         <span
           key={left}
           className="absolute h-[7px] w-[7px] -translate-y-1/2 rounded-full"
-          style={{ left: `${left}%`, top: '112px', backgroundColor: 'var(--accent-bright)' }}
+          style={{ left: `${left}%`, top: '90px', backgroundColor: 'var(--accent-bright)' }}
         />
       ))}
 
       {/* Punto de llegada */}
       <span
         className="absolute right-[2%] h-[11px] w-[11px] -translate-y-1/2 translate-x-1/2 rounded-full"
-        style={{ top: '8px', backgroundColor: 'var(--accent-bright)' }}
+        style={{ top: '6px', backgroundColor: 'var(--accent-bright)' }}
       />
     </div>
   )

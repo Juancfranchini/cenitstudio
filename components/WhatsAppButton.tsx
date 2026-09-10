@@ -9,7 +9,7 @@ export default function WhatsAppButton({ className = '' }: { className?: string 
       target="_blank"
       rel="noreferrer noopener"
       aria-label={`Escribinos por WhatsApp al ${brand.whatsapp.label}`}
-      className={`inline-flex items-center justify-center gap-2.5 rounded-[10px] bg-accent-bright px-[22px] py-[11px] text-[14px] font-semibold text-white transition-colors duration-200 hover:bg-accent ${className}`}
+      className={`inline-flex items-center justify-center gap-2.5 rounded-full bg-accent-bright px-[24px] py-[11px] text-[14px] font-semibold text-white transition-colors duration-200 hover:bg-accent ${className}`}
     >
       <WhatsAppIcon className="h-[17px] w-[17px]" />
       WhatsApp

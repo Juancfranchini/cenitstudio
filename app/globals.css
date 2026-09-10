@@ -21,7 +21,7 @@
   --dark-muted: #a7b3c2;
   --dark-border: #29415a;
 
-  /* Ritmo horizontal del mockup */
+  /* Ritmo del mockup: contenido 1152px a 1280px de viewport */
   --shell-padding: 40px;
 
   color-scheme: light;
@@ -53,9 +53,10 @@
 
 @layer components {
   .shell {
-    @apply mx-auto w-full max-w-shell;
-    padding-left: var(--shell-padding);
-    padding-right: var(--shell-padding);
+    @apply mx-auto w-full;
+    max-width: 1440px;
+    /* Márgenes laterales del mockup: 6,25% del viewport, con tope */
+    padding-inline: clamp(20px, 6.25%, 90px);
   }
 
   /* Eyebrow: mayúsculas, tracking amplio, cuerpo chico */
@@ -65,12 +66,12 @@
 
   .h-display {
     @apply font-bold leading-[1.14] tracking-[-0.015em];
-    font-size: clamp(2.125rem, 1.35rem + 3.1vw, 3.375rem);
+    font-size: clamp(1.9rem, 3.38vw, 3.05rem);
   }
 
   .h-section {
     @apply font-bold leading-[1.16] tracking-[-0.015em];
-    font-size: clamp(1.875rem, 1.35rem + 2.1vw, 2.625rem);
+    font-size: clamp(1.625rem, 2.55vw, 2.3rem);
   }
 
   .body-copy {
@@ -84,7 +85,7 @@
   }
 
   .clip-service {
-    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 52%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 42%);
   }
 }
 

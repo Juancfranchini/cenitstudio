@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer style={{ backgroundColor: 'var(--bg)' }}>
       <div className="shell">
-        <div className="flex flex-col gap-8 py-9 lg:flex-row lg:items-center lg:justify-between">
+        <div className="flex flex-col gap-8 py-6 lg:flex-row lg:items-center lg:justify-between">
           <div className="flex items-center gap-7">
             <a href="#inicio" aria-label="Cenit Studio, ir al inicio">
               <CenitLogo />
@@ -71,7 +71,7 @@ export default function Footer() {
         </div>
 
         <div
-          className="flex flex-col gap-2 border-t py-6 text-[12px] font-medium sm:flex-row sm:items-center sm:justify-between"
+          className="flex flex-col gap-2 border-t py-4 text-[12px] font-medium sm:flex-row sm:items-center sm:justify-between"
           style={{ borderColor: 'var(--border)', color: 'var(--text-muted)' }}
         >
           <p>© 2025 Cenit Studio. Todos los derechos reservados.</p>

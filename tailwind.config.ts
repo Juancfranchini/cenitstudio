@@ -25,7 +25,7 @@ const config: Config = {
         sans: ['var(--font-montserrat)', 'system-ui', 'sans-serif'],
       },
       maxWidth: {
-        shell: '1240px',
+        shell: '1232px',
       },
       letterSpacing: {
         eyebrow: '0.18em',

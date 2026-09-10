@@ -41,13 +41,13 @@ export default function Header() {
       className="sticky top-0 z-50 border-b"
       style={{ backgroundColor: 'var(--bg)', borderColor: 'var(--border)' }}
     >
-      <div className="shell flex h-[80px] items-center justify-between gap-6 lg:h-[88px]">
+      <div className="shell flex h-[80px] items-center gap-6 lg:h-[88px]">
         <a href="#inicio" aria-label="Cenit Studio, ir al inicio">
           <CenitLogo />
         </a>
 
-        <nav aria-label="Navegación principal" className="hidden lg:block">
-          <ul className="flex items-center gap-9">
+        <nav aria-label="Navegación principal" className="hidden lg:block lg:ml-[9%]">
+          <ul className="flex items-center gap-8">
             {navLinks.map((link) => {
               const isActive = active === link.href
               return (
@@ -73,7 +73,7 @@ export default function Header() {
           </ul>
         </nav>
 
-        <div className="flex items-center gap-3">
+        <div className="ml-auto flex items-center gap-3">
           <WhatsAppButton className="hidden sm:inline-flex" />
 
           <button

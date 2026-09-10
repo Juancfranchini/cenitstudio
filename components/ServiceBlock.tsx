@@ -11,10 +11,13 @@ type ServiceBlockProps = {
   src?: string
 }
 
+/** Misma diagonal que la máscara, para que el texto la bordee. */
+const DIAGONAL = 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 42%)'
+
 /**
- * Bloque de servicio del mockup: numeral arriba a la izquierda, hueco
- * fotográfico anclado arriba a la derecha con recorte diagonal, y el texto
- * corriendo por debajo del numeral, a la izquierda de la foto.
+ * Bloque de servicio del mockup: numeral con su filete arriba a la izquierda,
+ * hueco fotográfico arriba a la derecha y el texto corriendo a su izquierda,
+ * ganando ancho a medida que la diagonal libera espacio.
  */
 export default function ServiceBlock({
   number,
@@ -25,45 +28,49 @@ export default function ServiceBlock({
   src,
 }: ServiceBlockProps) {
   return (
-    <article className="relative flex h-full flex-col">
-      {/* Hueco fotográfico: fuera del flujo, para que el texto quede a su izquierda */}
-      <div className="absolute right-0 top-0 w-[42%] max-w-[160px] xl:max-w-[180px]">
-        <ImagePlaceholder
-          aspectRatio="0.65 / 1"
-          variant="service"
-          src={src}
-          alt={imageAlt}
-          label="IMAGE"
-        />
-      </div>
+    <article className="flex h-full flex-col">
+      <div>
+        <div
+          className="float-right ml-4 w-[42%] max-w-[170px]"
+          style={{ shapeOutside: DIAGONAL, shapeMargin: '10px' }}
+        >
+          <ImagePlaceholder
+            aspectRatio="0.65 / 1"
+            variant="service"
+            src={src}
+            alt={imageAlt}
+            label="IMAGE"
+          />
+        </div>
 
-      <div className="w-full pr-[48%] pt-1">
-        <span className="text-[12px] font-semibold" style={{ color: 'var(--accent-bright)' }}>
-          {number}
-        </span>
-        <span
-          aria-hidden="true"
-          className="mt-2 block h-px w-[52px]"
-          style={{ backgroundColor: 'var(--accent-bright)', opacity: 0.45 }}
-        />
-      </div>
-
-      <h3
-        className="mt-11 w-[60%] text-[21px] sm:w-[56%] font-bold leading-[1.22] tracking-[-0.01em]"
-        style={{ color: 'var(--text)' }}
-      >
-        {titleLines.map((line) => (
-          <span key={line} className="block">
-            {line}
+        <div className="pt-1">
+          <span className="text-[12px] font-semibold" style={{ color: 'var(--accent-bright)' }}>
+            {number}
           </span>
-        ))}
-      </h3>
+          <span
+            aria-hidden="true"
+            className="mt-2 block h-px w-[52px]"
+            style={{ backgroundColor: 'var(--accent-bright)', opacity: 0.45 }}
+          />
+        </div>
 
-      <p className="body-copy mt-5 w-full flex-1 pr-[48%]">{copy}</p>
+        <h3
+          className="mt-8 text-[19px] font-bold leading-[1.22] tracking-[-0.01em] sm:text-[20px] xl:text-[21px]"
+          style={{ color: 'var(--text)' }}
+        >
+          {titleLines.map((line) => (
+            <span key={line} className="block">
+              {line}
+            </span>
+          ))}
+        </h3>
+
+        <p className="body-copy mt-4">{copy}</p>
+      </div>
 
       <a
         href={href}
-        className="mt-8 inline-flex w-fit items-center gap-2 text-[14px] font-semibold transition-colors duration-200 hover:opacity-80"
+        className="mt-6 inline-flex w-fit items-center gap-2 text-[14px] font-semibold transition-colors duration-200 hover:opacity-80"
         style={{ color: 'var(--accent-bright)' }}
         aria-label={`Ver más sobre ${imageAlt}`}
       >

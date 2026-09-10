@@ -55,7 +55,7 @@ export default function ContactSection() {
       <svg
         viewBox="0 0 300 190"
         fill="none"
-        className="pointer-events-none absolute -right-2 top-6 hidden h-[150px] w-[230px] xl:block"
+        className="pointer-events-none absolute right-10 top-7 hidden h-[130px] w-[160px] lg:block"
         aria-hidden="true"
       >
         <path
@@ -68,7 +68,7 @@ export default function ContactSection() {
         <circle cx="259" cy="6" r="7" fill="var(--accent-bright)" />
       </svg>
 
-      <div className="shell grid gap-14 py-16 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.85fr)_minmax(0,1fr)] lg:gap-10 lg:py-[88px]">
+      <div className="shell grid gap-14 py-14 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.88fr)_minmax(0,1.05fr)] lg:gap-0 lg:pb-[52px] lg:pt-11">
         <div >
           <p className="eyebrow" style={{ color: 'var(--dark-muted)' }}>
             Contacto
@@ -98,10 +98,10 @@ export default function ContactSection() {
           </Button>
         </div>
 
-        <div className="flex items-start gap-5 lg:pt-2">
-          <MapPlaceholder className="h-[250px] w-auto max-w-full lg:h-[300px]" />
+        <div className="flex items-start gap-4 lg:items-center lg:pl-6">
+          <MapPlaceholder className="h-[200px] w-auto max-w-full lg:h-[228px]" />
           <p
-            className="whitespace-nowrap pt-[52px] text-[13px] font-medium leading-snug"
+            className="whitespace-nowrap pb-[86px] text-[13px] font-medium leading-snug"
             style={{ color: 'var(--dark-text)' }}
           >
             Zona Norte

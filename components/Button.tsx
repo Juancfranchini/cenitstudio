@@ -21,10 +21,10 @@ export default function Button({
   ...rest
 }: ButtonProps) {
   const base =
-    'inline-flex items-center justify-center gap-2.5 rounded-[10px] font-semibold transition-colors duration-200'
+    'inline-flex items-center justify-center gap-2.5 rounded-full font-semibold transition-colors duration-200'
   const sizes = {
-    md: 'px-[26px] py-[13px] text-[15px]',
-    sm: 'px-[18px] py-[10px] text-[13px]',
+    md: 'px-[32px] py-[11px] text-[14px]',
+    sm: 'px-[20px] py-[9px] text-[13px]',
   }
   const variants = {
     solid: 'bg-accent-bright text-white hover:bg-accent',
