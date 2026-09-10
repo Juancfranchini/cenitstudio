@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Tokens de marca — única fuente de verdad para el color */
+  --bg: #f8f7f4;
+  --surface: #ffffff;
+  --navy: #071c2f;
+  --navy-light: #0f2747;
+  --text: #0f2747;
+  --text-muted: #5b6878;
+  --border: #d7dde5;
+  --accent: #1d4ed8;
+  --accent-bright: #2563eb;
+  --accent-focus: #60a5fa;
+
+  --dark-bg: #071c2f;
+  --dark-surface: #0f2747;
+  --dark-text: #f8f7f4;
+  --dark-muted: #a7b3c2;
+  --dark-border: #29415a;
+
+  /* Ritmo horizontal del mockup */
+  --shell-padding: 40px;
+
+  color-scheme: light;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-weight: 500;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection {
+    background: var(--accent-bright);
+    color: #fff;
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--accent-focus);
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+}
+
+@layer components {
+  .shell {
+    @apply mx-auto w-full max-w-shell;
+    padding-left: var(--shell-padding);
+    padding-right: var(--shell-padding);
+  }
+
+  /* Eyebrow: mayúsculas, tracking amplio, cuerpo chico */
+  .eyebrow {
+    @apply text-[11px] font-semibold uppercase leading-none tracking-eyebrow;
+  }
+
+  .h-display {
+    @apply font-bold leading-[1.14] tracking-[-0.015em];
+    font-size: clamp(2.125rem, 1.35rem + 3.1vw, 3.375rem);
+  }
+
+  .h-section {
+    @apply font-bold leading-[1.16] tracking-[-0.015em];
+    font-size: clamp(1.875rem, 1.35rem + 2.1vw, 2.625rem);
+  }
+
+  .body-copy {
+    @apply text-[15px] font-medium leading-[1.72];
+    color: var(--text-muted);
+  }
+
+  /* Máscaras diagonales: la diagonal siempre asciende hacia la derecha */
+  .clip-hero {
+    clip-path: polygon(0% 100%, 55% 0%, 100% 0%, 100% 100%);
+  }
+
+  .clip-service {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 52%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
