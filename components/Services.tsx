@@ -8,7 +8,7 @@ export default function Services() {
       className="border-t"
       style={{ backgroundColor: 'var(--bg)', borderColor: 'var(--border)' }}
     >
-      <div className="shell py-14 lg:pb-[52px] lg:pt-8">
+      <div className="shell py-14 lg:pb-[64px] lg:pt-10">
         <div className="grid gap-8 lg:grid-cols-[minmax(0,0.56fr)_minmax(0,1fr)] lg:gap-0">
           <div >
             <p className="eyebrow" style={{ color: 'var(--accent-bright)' }}>
@@ -25,14 +25,14 @@ export default function Services() {
             className="border-l pl-7 lg:mt-1 lg:self-start lg:pt-1"
             style={{ borderColor: 'var(--border)' }}
           >
-            <p className="body-copy max-w-[245px]">
+            <p className="body-copy max-w-[275px]">
               Tres áreas, un mismo objetivo: que tu empresa sea más eficiente, segura y
               rentable.
             </p>
           </div>
         </div>
 
-        <div className="mt-8 grid gap-14 lg:grid-cols-3 lg:gap-0">
+        <div className="mt-10 grid gap-14 lg:grid-cols-3 lg:gap-0">
           {services.map((service, index) => (
             <div
               key={service.number}

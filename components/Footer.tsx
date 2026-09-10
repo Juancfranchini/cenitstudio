@@ -6,18 +6,18 @@ export default function Footer() {
   return (
     <footer style={{ backgroundColor: 'var(--bg)' }}>
       <div className="shell">
-        <div className="flex flex-col gap-8 py-6 lg:flex-row lg:items-center lg:justify-between">
+        <div className="flex flex-col gap-8 py-8 lg:flex-row lg:items-center lg:justify-between">
           <div className="flex items-center gap-7">
             <a href="#inicio" aria-label="Cenit Studio, ir al inicio">
               <CenitLogo />
             </a>
             <span
               aria-hidden="true"
-              className="hidden h-9 w-px lg:block"
+              className="hidden h-11 w-px lg:block"
               style={{ backgroundColor: 'var(--border)' }}
             />
             <p
-              className="hidden text-[14px] font-medium lg:block"
+              className="hidden text-[15px] font-medium lg:block"
               style={{ color: 'var(--text-muted)' }}
             >
               {brand.tagline}
@@ -31,7 +31,7 @@ export default function Footer() {
                   <li key={link.href}>
                     <a
                       href={link.href}
-                      className="text-[14px] font-semibold transition-colors duration-200 hover:opacity-70"
+                      className="text-[15px] font-semibold transition-colors duration-200 hover:opacity-70"
                       style={{ color: 'var(--text)' }}
                     >
                       {link.label}
@@ -71,7 +71,7 @@ export default function Footer() {
         </div>
 
         <div
-          className="flex flex-col gap-2 border-t py-4 text-[12px] font-medium sm:flex-row sm:items-center sm:justify-between"
+          className="flex flex-col gap-2 border-t py-5 text-[12px] font-medium sm:flex-row sm:items-center sm:justify-between"
           style={{ borderColor: 'var(--border)', color: 'var(--text-muted)' }}
         >
           <p>© 2025 Cenit Studio. Todos los derechos reservados.</p>

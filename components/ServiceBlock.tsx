@@ -31,7 +31,7 @@ export default function ServiceBlock({
     <article className="flex h-full flex-col">
       <div>
         <div
-          className="float-right ml-4 w-[42%] max-w-[170px]"
+          className="float-right ml-4 w-[42%] max-w-[200px] xl:ml-5 xl:w-[46%]"
           style={{ shapeOutside: DIAGONAL, shapeMargin: '10px' }}
         >
           <ImagePlaceholder
@@ -55,7 +55,7 @@ export default function ServiceBlock({
         </div>
 
         <h3
-          className="mt-8 text-[19px] font-bold leading-[1.22] tracking-[-0.01em] sm:text-[20px] xl:text-[21px]"
+          className="mt-9 text-[19px] font-bold leading-[1.22] tracking-[-0.015em] xl:text-[21px]"
           style={{ color: 'var(--text)' }}
         >
           {titleLines.map((line) => (
@@ -70,7 +70,7 @@ export default function ServiceBlock({
 
       <a
         href={href}
-        className="mt-6 inline-flex w-fit items-center gap-2 text-[14px] font-semibold transition-colors duration-200 hover:opacity-80"
+        className="mt-auto inline-flex w-fit items-center gap-2 pt-7 text-[14px] font-semibold transition-colors duration-200 hover:opacity-80"
         style={{ color: 'var(--accent-bright)' }}
         aria-label={`Ver más sobre ${imageAlt}`}
       >

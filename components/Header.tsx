@@ -41,13 +41,13 @@ export default function Header() {
       className="sticky top-0 z-50 border-b"
       style={{ backgroundColor: 'var(--bg)', borderColor: 'var(--border)' }}
     >
-      <div className="shell flex h-[80px] items-center gap-6 lg:h-[88px]">
+      <div className="shell flex h-[80px] items-center gap-6 lg:h-[118px]">
         <a href="#inicio" aria-label="Cenit Studio, ir al inicio">
           <CenitLogo />
         </a>
 
         <nav aria-label="Navegación principal" className="hidden lg:block lg:ml-[9%]">
-          <ul className="flex items-center gap-8">
+          <ul className="flex items-center gap-8 xl:gap-10">
             {navLinks.map((link) => {
               const isActive = active === link.href
               return (
@@ -55,7 +55,7 @@ export default function Header() {
                   <a
                     href={link.href}
                     aria-current={isActive ? 'page' : undefined}
-                    className="relative block py-2 text-[14px] font-semibold transition-colors duration-200"
+                    className="relative block py-2 text-[15px] font-semibold transition-colors duration-200 xl:text-[16px]"
                     style={{ color: isActive ? 'var(--accent-bright)' : 'var(--text)' }}
                   >
                     {link.label}

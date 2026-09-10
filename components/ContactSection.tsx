@@ -55,7 +55,7 @@ export default function ContactSection() {
       <svg
         viewBox="0 0 300 190"
         fill="none"
-        className="pointer-events-none absolute right-10 top-7 hidden h-[130px] w-[160px] lg:block"
+        className="pointer-events-none absolute right-10 top-8 hidden h-[150px] w-[180px] xl:block"
         aria-hidden="true"
       >
         <path
@@ -68,7 +68,7 @@ export default function ContactSection() {
         <circle cx="259" cy="6" r="7" fill="var(--accent-bright)" />
       </svg>
 
-      <div className="shell grid gap-14 py-14 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.88fr)_minmax(0,1.05fr)] lg:gap-0 lg:pb-[52px] lg:pt-11">
+      <div className="shell grid gap-14 py-14 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.88fr)_minmax(0,1.05fr)] lg:gap-0 lg:pb-[64px] lg:pt-14">
         <div >
           <p className="eyebrow" style={{ color: 'var(--dark-muted)' }}>
             Contacto
@@ -98,10 +98,11 @@ export default function ContactSection() {
           </Button>
         </div>
 
-        <div className="flex items-start gap-4 lg:items-center lg:pl-6">
-          <MapPlaceholder className="h-[200px] w-auto max-w-full lg:h-[228px]" />
+        <div className="relative lg:pl-4">
+          <MapPlaceholder className="h-[240px] w-auto max-w-full lg:h-[300px] xl:h-[330px]" />
+          {/* Rótulo junto al punto de ubicación, como en el mockup */}
           <p
-            className="whitespace-nowrap pb-[86px] text-[13px] font-medium leading-snug"
+            className="absolute left-[58%] top-[17%] whitespace-nowrap text-[13px] font-medium leading-snug lg:text-[14px]"
             style={{ color: 'var(--dark-text)' }}
           >
             Zona Norte
@@ -114,7 +115,7 @@ export default function ContactSection() {
           className="lg:border-l lg:pl-10"
           style={{ borderColor: 'var(--dark-border)' }}
         >
-          <h3 className="text-[21px] font-bold" style={{ color: 'var(--dark-text)' }}>
+          <h3 className="text-[21px] font-bold xl:text-[23px]" style={{ color: 'var(--dark-text)' }}>
             Contacto directo
           </h3>
 

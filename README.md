@@ -80,8 +80,9 @@ Sobre navy: `--dark-bg`, `--dark-surface`, `--dark-text`, `--dark-muted`,
 
 ## Imágenes
 
-Todos los espacios fotográficos son placeholders. Ver
-`public/images/README.md` para los nombres de archivo y cómo activarlos.
+Todos los espacios fotográficos son placeholders en un gris neutro
+(`--photo-slot`, que no es color de marca y desaparece al colocar las fotos).
+Ver `public/images/README.md` para los nombres de archivo y cómo activarlos.
 El hueco fija ratio, recorte y posición, así que reemplazar el placeholder
 por la foto real no altera el layout.
 

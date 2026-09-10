@@ -35,17 +35,17 @@ export function CenitIsotype({
 export default function CenitLogo({ tone = 'light', className = '' }: CenitLogoProps) {
   const ink = tone === 'light' ? 'var(--navy)' : 'var(--dark-text)'
   return (
-    <span className={`inline-flex items-center gap-[10px] ${className}`}>
-      <CenitIsotype tone={tone} className="h-[30px] w-[32px] shrink-0" />
+    <span className={`inline-flex items-center gap-[12px] ${className}`}>
+      <CenitIsotype tone={tone} className="h-[40px] w-[42px] shrink-0 lg:h-[54px] lg:w-[58px]" />
       <span className="flex flex-col">
         <span
-          className="text-[19px] font-bold leading-none tracking-wordmark"
+          className="text-[22px] font-bold leading-none tracking-wordmark lg:text-[28px]"
           style={{ color: ink }}
         >
           CENIT
         </span>
         <span
-          className="mt-[5px] text-[8px] font-medium leading-none tracking-studio"
+          className="mt-[6px] text-[9px] font-medium leading-none tracking-studio lg:mt-[7px] lg:text-[10px]"
           style={{ color: ink, opacity: 0.72 }}
         >
           STUDIO

@@ -41,13 +41,13 @@ export default function ImagePlaceholder({
       ) : (
         <div
           className="flex h-full w-full items-center justify-center"
-          style={{ backgroundColor: 'var(--navy-light)' }}
+          style={{ backgroundColor: 'var(--photo-slot)' }}
           role="img"
           aria-label={alt || label}
         >
           <span
             className="px-4 text-center text-[10px] font-semibold uppercase tracking-eyebrow"
-            style={{ color: 'var(--dark-muted)' }}
+            style={{ color: 'rgba(15, 39, 71, 0.5)' }}
           >
             {label}
           </span>

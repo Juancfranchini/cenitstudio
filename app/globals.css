@@ -21,6 +21,10 @@
   --dark-muted: #a7b3c2;
   --dark-border: #29415a;
 
+  /* Tono neutro de los huecos fotográficos: no es color de marca,
+     desaparece al colocar las fotos definitivas */
+  --photo-slot: #9aa4b0;
+
   /* Ritmo del mockup: contenido 1152px a 1280px de viewport */
   --shell-padding: 40px;
 
@@ -61,12 +65,12 @@
 
   /* Eyebrow: mayúsculas, tracking amplio, cuerpo chico */
   .eyebrow {
-    @apply text-[11px] font-semibold uppercase leading-none tracking-eyebrow;
+    @apply text-[10px] font-semibold uppercase leading-none tracking-eyebrow lg:text-[11px] xl:text-[12px];
   }
 
   .h-display {
-    @apply font-bold leading-[1.14] tracking-[-0.015em];
-    font-size: clamp(1.9rem, 3.38vw, 3.05rem);
+    @apply font-bold leading-[1.14] tracking-[-0.02em];
+    font-size: clamp(1.95rem, 3.6vw, 3.25rem);
   }
 
   .h-section {
@@ -75,7 +79,8 @@
   }
 
   .body-copy {
-    @apply text-[15px] font-medium leading-[1.72];
+    @apply font-medium leading-[1.72];
+    font-size: clamp(15px, 1.12vw, 16px);
     color: var(--text-muted);
   }
 

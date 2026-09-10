@@ -8,7 +8,7 @@ export default function Process() {
       className="overflow-hidden border-t"
       style={{ backgroundColor: 'var(--bg)', borderColor: 'var(--border)' }}
     >
-      <div className="shell py-14 lg:pb-[52px] lg:pt-10">
+      <div className="shell py-14 lg:pb-[64px] lg:pt-12">
         <div className="grid gap-8 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,1fr)] lg:gap-0">
           <div >
             <p className="eyebrow" style={{ color: 'var(--text-muted)' }}>
@@ -58,13 +58,13 @@ export default function Process() {
               </span>
 
               <h3
-                className="mt-3 text-[17px] font-bold leading-snug"
+                className="mt-3 text-[18px] font-bold leading-snug xl:text-[20px]"
                 style={{ color: 'var(--text)' }}
               >
                 {step.title}
               </h3>
 
-              <p className="body-copy mt-3 max-w-[250px]">{step.copy}</p>
+              <p className="body-copy mt-4 max-w-[265px]">{step.copy}</p>
             </li>
           ))}
         </ol>
